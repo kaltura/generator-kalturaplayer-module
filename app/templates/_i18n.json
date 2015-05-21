@@ -1,6 +1,0 @@
-{
-	"en": {
-		"<%= name %>-keyName1": "value1",
-		"<%= name %>-keyName2": "value2"
-	}
-}
