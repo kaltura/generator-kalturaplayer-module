@@ -1,4 +1,4 @@
-# generator-kalturaplayer-module [![Build Status](https://secure.travis-ci.org/OrenMe/generator-kalturaplayer-module.png?branch=master)](https://travis-ci.org/OrenMe/generator-kalturaplayer-module)
+# generator-kalturaplayer-module
 
 > [Yeoman](http://yeoman.io) generator for creating [Kaltura Player](https://github.com/kaltura/mwEmbed/) modules and plugins - lets you quickly set up a project following best practices.
 
