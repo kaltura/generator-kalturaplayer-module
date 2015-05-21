@@ -1,0 +1,5 @@
+//Style sheet for <%= kalturaPluginName %> plugin
+//It's recomended to prefix your plugin styles with the plugin name
+.<%= kalturaPluginName %> {
+
+}

@@ -1,0 +1,38 @@
+{
+  "name": "generator-kalturaplayer-module",
+  "version": "1.0.0",
+  "description": "Kaltura player Yeoman module and plugin generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaltura/generator-kalturaplayer-module"
+  },
+  "bugs": {
+    "url": "https://kaltura/generator-kalturaplayer-module/issues"
+  },
+  "author": {
+    "name": "Oren Me",
+    "email": "oren.melamed@kaltura.com",
+    "url": "https://github.com/OrenMe"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "kaltura",
+    "mwEmbed"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

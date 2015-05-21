@@ -1,0 +1,71 @@
+{
+<% var kgDefaultComponentAttr = {
+        "parent": {
+            "doc": "Parent container for component. Components include default placement, leave as null if unsure.",
+            "type": "enum",
+            "enum": ["topBarContainer", "videoHolder", "controlsContainer"],
+            "options": [{
+                "label": "Top bar container",
+                "value": "topBarContainer"
+            }, {
+                "label": "Controls container",
+                "value": "controlsContainer"
+            }],
+            "initvalue": "topBarContainer"
+        },
+        "align": {
+            "doc": "Alignment for component, can be left or right.",
+            "type": "enum",
+            "enum": ["left", "right"],
+            "initvalue": "right",
+            "options": [{
+                "label": "Left",
+                "value": "left"
+            }, {
+                "label": "Right",
+                "value": "right"
+            }]
+        },
+        "order": {
+            "doc": "Draw order of the component within the container.\n\rTogether with alignment, determines component placement of the component. Order is set with respect to siblings on the parent container.",
+            "type": "number"
+        }
+    };%>
+	"description" : "Plugin description",
+	"label" : "Label name in studio",
+	"attributes" : {
+		"general": {
+			"doc": "Help button description",
+			"label": "Description of attribute",
+			"type": "Attribute type (url | text | string | number | boolean | float | json | uivars | entrySelector)",
+			"initvalue": "Default attribute value"					
+		},
+		"color": {
+			"doc": "Help button description",
+			"label": "Description of attribute",
+			"player-refresh": "Plugin property to watch for player refresh updates",
+			"type": "color",
+			"initvalue": "Default attribute value",
+			"alpha": true
+		},
+		"enum": {
+			"doc": "Help button description",
+			"label": "Description of attribute",
+			"type": "Attribute type (url | text | string | number | boolean | float | color | enum | json | hiddenValue | uivars | entrySelector)",
+			"initvalue": "Default attribute value",
+			"enum": ["enum1", "enum2"],
+			"options": [{
+				"label": "array of objects mapping enums to label names",
+				"value": "enum1"
+			},{
+				"label": "Enum option No.2",
+				"value": "enum2"
+			}]
+		},
+		"hidden": {
+			"doc": "Help button description(hidden values are not shown in studio)",
+			"type": "hiddenValue",
+			"initvalue": "Default attribute value"
+		}
+	}
+}	
