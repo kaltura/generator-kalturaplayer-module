@@ -1,47 +1,64 @@
 # generator-kalturaplayer-module [![Build Status](https://secure.travis-ci.org/OrenMe/generator-kalturaplayer-module.png?branch=master)](https://travis-ci.org/OrenMe/generator-kalturaplayer-module)
 
-> [Yeoman](http://yeoman.io) generator
+> [Yeoman](http://yeoman.io) generator for creating [Kaltura Player](https://github.com/kaltura/mwEmbed/) modules and plugins - lets you quickly set up a project following best practices.
 
 
 ## Getting Started
 
-### What is Yeoman?
-
-Trick question. It's not a thing. It's this guy:
-
-![](http://i.imgur.com/JHaAlBJ.png)
-
-Basically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.
-
-Not every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*
+* Install Yeoman from npm, run:
 
 ```bash
 npm install -g yo
 ```
-
-### Yeoman Generators
-
-Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
-
-To install generator-kalturaplayer-module from npm, run:
+* Install generator-kalturaplayer-module from npm, run:
 
 ```bash
 npm install -g generator-kalturaplayer-module
 ```
+* Clone [Kaltura Player](https://github.com/kaltura/mwEmbed/) to your machine
 
-Finally, initiate the generator:
+```bash
+git clone https://github.com/kaltura/mwEmbed/
+```
+
+* Change working dir to the modules dir
+
+```bash
+Cd mwEmbed/modules
+```
+
+* Finally, initiate the generator and follow the steps:
 
 ```bash
 yo kalturaPlayer-module
 ```
 
-### Getting To Know Yeoman
+## Generators
 
-Yeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.
+Available generators:
 
-If you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).
+* App(Module + optional plugins)
+    - [kalturaPlayer-module](#app) (aka [kalturaPlayer-module:app](#app))
+* Plugin
+    - [kalturaPlayer-module:plugin](#plugin)
 
+### App
+Sets up a module, generating all the boilerplate you need to get started.
+
+Example:
+```bash
+yo kalturaPlayer-module
+```
+
+### Plugin
+Generates a new plugin in an existibng module.
+
+Example:
+```bash
+yo kalturaPlayer-module:plugin myPluginName
+```
+>Plugin must be initiated from inside a module directory
 
 ## License
 
-MIT
+[BSD license](http://opensource.org/licenses/bsd-license.php)
