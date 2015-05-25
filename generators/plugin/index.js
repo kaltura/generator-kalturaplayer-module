@@ -114,23 +114,23 @@ module.exports = yeoman.generators.Base.extend({
 
     configuring: {
         resolvePlugin: function() {        
-            this.props.config = {
-                basePath: (this.moduleName === process.cwd().split(path.sep).pop()) ? './' : this.moduleName + '/',
-                resourcePath: 'resources/',
-                testsPath: 'tests/'
+            this.paths = {
+                root: (this.moduleName === process.cwd().split(path.sep).pop()) ? './' : this.moduleName + '/',
+                resources: 'resources/',
+                tests: 'tests/'
             };
 
             this.props.dependencies = [pluginDependenciesMap[this.props.pluginBase]];
-            this.props.scripts = [this.props.config.resourcePath + this.props.kalturaPluginName + '.js'];
+            this.props.scripts = [this.paths.resources + this.props.kalturaPluginName + '.js'];
             if (requireUiFeatures(this.props)){
-                this.props.styles = [this.props.config.resourcePath + this.props.kalturaPluginName + '.css'];
+                this.props.styles = [this.paths.resources + this.props.kalturaPluginName + '.css'];
             }
             if (this.props.requireMessageFile) {
-                this.props.messageFile = this.props.config.resourcePath + this.props.kalturaPluginName + ".i18n.json";                    
+                this.props.messageFile = this.paths.resources + this.props.kalturaPluginName + ".i18n.json";                    
             }
             if (this.props.requireTemplate) {
                 Object.keys(this.props.templates).forEach(function(name, index, arr) {
-                    this.props.templates[name] =  this.props.config.resourcePath + name + '.tmpl.html';                        
+                    this.props.templates[name] =  this.paths.resources + name + '.tmpl.html';                        
                 }.bind(this));
             }
             //Plugin settings clean up
@@ -147,10 +147,10 @@ module.exports = yeoman.generators.Base.extend({
         app: function() {
             //First verify that module is valid for plugin
             var moduleExist = true;
-            var config = this.props.config;
-            var manifestsPath = config.basePath + this.moduleName + '.manifest.json';     
+            var paths = this.paths;
+            var manifestsPath = paths.root + this.moduleName + '.manifest.json';     
             this.log(manifestsPath);       
-            var moduleRegistryPath = config.basePath + this.moduleName + '.json';
+            var moduleRegistryPath = paths.root + this.moduleName + '.json';
             if (!this.fs.exists(manifestsPath)){
                 this.log(chalk.red("Couldn't find module manifest, aborting..."));
                 moduleExist = false;
@@ -184,7 +184,7 @@ module.exports = yeoman.generators.Base.extend({
                 //Create plugin file
                 this.fs.copyTpl(
                     this.templatePath('_plugin.js'),
-                    this.destinationPath(config.basePath + this.props.scripts[0]),
+                    this.destinationPath(paths.root + this.props.scripts[0]),
                     { 
                         plugin: this.props,                         
                         hasUI: this.props.styles ? true : false                        
@@ -195,7 +195,7 @@ module.exports = yeoman.generators.Base.extend({
                 if (this.props.styles){
                     this.fs.copyTpl(
                         this.templatePath('_style.css'),
-                        this.destinationPath(config.basePath + this.props.styles[0]),
+                        this.destinationPath(paths.root + this.props.styles[0]),
                         this.props
                     );
                 }
@@ -204,7 +204,7 @@ module.exports = yeoman.generators.Base.extend({
                 if (this.props.messageFile) {
                     this.fs.copyTpl(
                         this.templatePath('_i18n.json'),
-                        this.destinationPath(config.basePath + this.props.messageFile),
+                        this.destinationPath(paths.root + this.props.messageFile),
                         {name: this.props.kalturaPluginName}
                     );
                 }
@@ -212,7 +212,7 @@ module.exports = yeoman.generators.Base.extend({
                 //Create plugin template file/s if needed
                 if (this.props.templates) {
                     Object.keys(this.props.templates).forEach(function(template) {
-                        this.fs.write(config.basePath + this.props.templates[template], '');
+                        this.fs.write(paths.root + this.props.templates[template], '');
                     }.bind(this));
                 }
             }
