@@ -47,7 +47,7 @@ Sets up a module, generating all the boilerplate you need to get started.
 
 Example:
 ```bash
-yo kalturaPlayer-module
+yo kalturaplayer-module
 ```
 
 ### Plugin
@@ -55,7 +55,7 @@ Generates a new plugin in an existibng module.
 
 Example:
 ```bash
-yo kalturaPlayer-module:plugin myPluginName
+yo kalturaplayer-module:plugin myPluginName
 ```
 >Plugin must be initiated from inside a module directory
 
