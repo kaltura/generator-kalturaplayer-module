@@ -1,6 +1,6 @@
 {
   "name": "generator-kalturaplayer-module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Kaltura player Yeoman module and plugin generator",
   "license": "MIT",
   "main": "app/index.js",
