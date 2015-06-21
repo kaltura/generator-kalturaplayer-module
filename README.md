@@ -61,4 +61,8 @@ yo kalturaplayer-module:plugin myPluginName
 
 ## License
 
-[BSD license](http://opensource.org/licenses/bsd-license.php)
+All generator-kalturaplayer-module code is released under the AGPLv3 unless a different license for a particular library is specified in the applicable library path
+
+Copyright (C) 2007-2015 Kaltura, Wikimedia Foundation
+
+Sub modules and libraries carry specific copyright.
