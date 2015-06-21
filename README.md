@@ -5,12 +5,12 @@
 
 ## Getting Started
 
-* Install Yeoman from npm, run:
+* Install Yeoman as super user [root or Administrator], run:
 
 ```bash
 npm install -g yo
 ```
-* Install generator-kalturaplayer-module from npm, run:
+* Install generator-kalturaplayer-module as super user [root or Administrator], run:
 
 ```bash
 npm install -g generator-kalturaplayer-module
@@ -24,13 +24,13 @@ git clone https://github.com/kaltura/mwEmbed/
 * Change working dir to the modules dir
 
 ```bash
-Cd mwEmbed/modules
+cd mwEmbed/modules
 ```
 
 * Finally, initiate the generator and follow the steps:
 
 ```bash
-yo kalturaPlayer-module
+yo kalturaplayer-module
 ```
 
 ## Generators
