@@ -61,8 +61,6 @@ yo kalturaplayer-module:plugin myPluginName
 
 ## License
 
-All generator-kalturaplayer-module code is released under the AGPLv3 unless a different license for a particular library is specified in the applicable library path
+All code in this project is released under the AGPLv3 license unless a different license for a particular library is specified in the applicable library path.
 
-Copyright (C) 2007-2015 Kaltura, Wikimedia Foundation
-
-Sub modules and libraries carry specific copyright.
+Copyright © Kaltura Inc. All rights reserved.
